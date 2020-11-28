@@ -31,10 +31,9 @@
     <script>
         $(document).ready(function(){
             $("img").click(function(){
-                var aux = "";
-                aux = $(this).attr("src");
+                let aux = $(this).attr("src");
                 $(this).attr("src", $(this).attr("new-img-src"));
-                $(this).attr("new-img-src", b);
+                $(this).attr("new-img-src", aux);
             });
         });
     </script>
