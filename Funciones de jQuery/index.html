@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Funciones jQuery</title>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1>Funciones jQuery</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="accordion col-lg-12" id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <div class="row">
+                            <h5 class="mb-0 col">
+                                .click()    
+                            </h5>
+                            <button class="btn btn-link btn-block text-right col" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Ejemplo:
+                            </button>
+                        </div>    
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <pre class="bg-dark text-white"><code>
+                                $("#click").click(function(){
+                                    $('#case1').hide();
+                                  });
+                            </code></pre>
+                            <div class="row">
+                                <input type="button" class="btn btn-outline-primary col-1 h-25 btn1" value="Resultado">
+                                <br>
+                                <p class="col-11" id="case1">Al hacer click en resultado, este texto desaparecera.</p>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <div class="row">
+                            <h5 class="mb-0 col">
+                                .hide()    
+                            </h5>
+                            <button class="btn btn-link btn-block text-right col collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Ejemplo:
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            <pre class="bg-dark text-white"><code>
+                                $(".btn2").click(function(){
+                                    $(this).hide();
+                                });
+                            </code></pre>
+                            <div class="row">
+                                <input type="button" class="btn btn-outline-primary col h-25 offset-3 col-6 btn2" value="Al hacer click este boton desaparecera">
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <div class="row">
+                            <h5 class="mb-0 col">
+                                .show()
+                            </h5>
+                            <button class="btn btn-link btn-block text-right collapsed col" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Ejemplo:
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            <pre class="bg-dark text-white"><code>
+                                $(".btn3").click(function(){
+                                    $('#case3').show();
+                                });
+                            </code></pre>
+                            <div class="row">
+                                <input type="button" class="btn btn-outline-primary col h-25 btn3" value="Aparecer texto">
+                                <br>
+                                <p class="col text-center" id="case3">OOOOOHHH! he aparecido</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <div class="row">
+                            <h5 class="mb-0 col">
+                                .toggle()
+                            </h5>
+                            <button class="btn btn-link btn-block text-right col collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Ejemplo:
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+                            <pre class="bg-dark text-white"><code>
+                                $(".btn4").click(function(){
+                                    $('#case4').toggle();
+                                });
+                            </code></pre>
+                            <div class="row"> 
+                                <input type="button" class="btn btn-outline-primary col-sm-6 h-25 btn4" value="Clickea">
+                                <br>
+                                <p class="col-sm-6 text-center" id="case4">Alterna hide() y show()</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFive">
+                        <div class="row">
+                            <h5 class="mb-0 col">
+                                .slideUp() y .slideDown()
+                            </h5>
+                            <button class="btn btn-link btn-block text-right col collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Ejemplo:
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                        <div class="card-body">
+                            <pre class="bg-dark text-white"><code>
+                                $(".btn5").click(function(){
+                                    $("#case5").slideUp();
+                                });
+                                $(".btn6").click(function(){
+                                    $("#case5").slideDown();
+                                });
+                            </code></pre>
+                            <p class="offset-3 col-6 text-center" id="case5">Slide Up y Slide Down</p>
+                            <br>
+                            <div class="row justify-content-around">
+                                <input type="button" class="btn btn-outline-primary col-4 h-25 btn5" value="Slide Up">
+                                <input type="button" class="btn btn-outline-primary col-4 h-25 btn6" value="Slide Down">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingSix">
+                        <div class="row">
+                            <h5 class="mb-0 col">
+                                .slideToggle()
+                            </h5>
+                            <button class="btn btn-link btn-block text-right col collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Ejemplo:
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                        <div class="card-body">
+                            <pre class="bg-dark text-white"><code>
+                                $(".btn7").click(function(){
+                                    $("#case6").slideToggle();
+                                });
+                            </code></pre>
+                            <p class="offset-3 col-6 text-center" id="case6">Alternar Slide Up y Slide Down</p>
+                            <br>
+                            <div class="row">
+                                <input type="button" class="btn btn-outline-primary offset-3 col-6 h-25 btn7" value="Clickea">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingSeven">
+                        <div class="row">
+                            <h5 class="mb-0 col">
+                                .fadeIn() y .fadeOut()
+                            </h5>
+                            <button class="btn btn-link btn-block text-right col collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                Ejemplo:
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                        <div class="card-body">
+                            <pre class="bg-dark text-white"><code>
+                                $(".btn8").click(function(){
+                                    $(".div").fadeIn(2000);
+                                });
+                                $(".btn9").click(function(){
+                                    $(".div").fadeOut("slow");
+                                });
+                            </code></pre>
+                            <br>
+                            <div class="row justify-content-around">
+                                <div class="div col-2 color-r"></div>
+                                <div class="div col-2 color-n"></div>
+                                <div class="div col-2 color-v"></div>
+                                <div class="div col-2 color-a"></div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-around">
+                                <input type="button" class="btn btn-outline-primary col-3 h-25 btn8" value="Fade In">
+                                <input type="button" class="btn btn-outline-primary col-3 h-25 btn9" value="Fade Out">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingEight">
+                        <div class="row">
+                            <h5 class="mb-0 col">
+                                .addClass()
+                            </h5>
+                            <button class="btn btn-link btn-block text-right col collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                Ejemplo:
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                        <div class="card-body">
+                            <pre class="bg-dark text-white"><code>
+                                $(".btn10").click(function(){
+                                    $(".h").addClass("border");
+                                });
+                            </code></pre>
+                            <br>
+                            <div class="row justify-content-around">
+                                <div class="h col-4 color-r"></div>
+                                <div class="h col-4 color-a"></div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-around">
+                                <input type="button" class="btn btn-outline-primary col-3 h-25 btn10" value="Agregar Clase">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingNine">
+                        <div class="row">
+                            <h5 class="mb-0 col">
+                                .before() y .after()
+                            </h5>
+                            <button class="btn btn-link btn-block text-right col collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                Ejemplo:
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+                        <div class="card-body">
+                            <pre class="bg-dark text-white"><code>
+                                $(".btn11").click(function(){
+                                    $(".btn11").before("")
+                                });
+                                $(".btn12").click(function(){
+                                    $(".btn12").after("");
+                                });
+                            </code></pre>
+                            <br>
+                            <div class="row justify-content-around">
+                                <!-- <div class="alert alert-success alert-dismissible col-6">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <strong>Success!</strong> Esta Alerta se inserto Antes .before()
+                                </div> -->
+                                <input type="button" class="btn btn-outline-primary col-3 h-25 btn11" value="Insertar contenido antes del boton">
+                            </div>
+                            <br>
+                            <div class="row justify-content-around">
+                                <input type="button" class="btn btn-outline-primary col-sm-4 h-25 btn12" value="Insertar contenido despues del boton">
+                                <!-- <div class="alert alert-success alert-dismissible col-sm-6">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <strong>Success!</strong> Esta Alerta se inserto despues .after()
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTen">
+                        <div class="row">
+                            <h5 class="mb-0 col">
+                                .append()
+                            </h5>
+                            <button class="btn btn-link btn-block text-right col collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                Ejemplo:
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+                        <div class="card-body">
+                            <pre class="bg-dark text-white"><code>
+                                $(".btn13").click(function(){
+                                    $(".h").append("&ltdiv class='h2 color-a mt-2'&gt&lt/div&gt");
+                                });
+                            </code></pre>
+                            <br>
+                            <div class="row justify-content-around">
+                                <div class="h col-4 color-r"></div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-around">
+                                <input type="button" class="btn btn-outline-primary col-3 h-25 btn13" value="Insertar contenido dentro de rojo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingEleven">
+                        <div class="row">
+                            <h5 class="mb-0 col">
+                                .html()
+                            </h5>
+                            <button class="btn btn-link btn-block text-right col collapsed" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                Ejemplo:
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
+                        <div class="card-body">
+                            <pre class="bg-dark text-white"><code>
+                                // Cambiar contenido
+                                $(".btn14").click(function(){
+                                    $(".p1").html("<b>Ya Cambio!!!</b>");
+                                });
+                                // Devolver contenido
+                                $(".p1").click(function(){
+                                    alert($(".p1").html());
+                                });
+                            </code></pre>
+                            <br>
+                            <div class="row justify-content-around">
+                                <p class="p1">Esto va ha Cambiar!!!</p>
+                            </div>
+                            <br>
+                            <div class="row justify-content-around">
+                                <input type="button" class="btn btn-outline-primary col-3 h-25 btn14" value="Cambiar contenido de 'p'">
+                            </div>
+                            <small class="text-muted">Clickea sobre parrafo para devolver el contenido</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwelve">
+                        <div class="row">
+                            <h5 class="mb-0 col">
+                                .attr()
+                            </h5>
+                            <button class="btn btn-link btn-block text-right col collapsed" type="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                                Ejemplo:
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion">
+                        <div class="card-body">
+                            <pre class="bg-dark text-white"><code>
+                                // Cambiar atributo
+                                $(".btn15").click(function(){
+                                    $(".btn15").attr("value", "Submit");
+                                });
+                                // Devolver atributo
+                                $(".b").click(function(){
+                                    alert("Value: "+$(".btn15").attr("value"));
+                                });                                
+                            </code></pre>
+                            <br>
+                            <div class="row justify-content-around">
+                                <input type="button" class="btn btn-outline-primary col-3 h-25 btn15" value="Cambiar value del boton">
+                            </div>
+                            <small class="text-muted">Clickea <b class="b">AQUI</b> para devolver el contenido</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThirteen">
+                        <div class="row">
+                            <h5 class="mb-0 col">
+                                .val()
+                            </h5>
+                            <button class="btn btn-link btn-block text-right col collapsed" type="button" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                                Ejemplo:
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordion">
+                        <div class="card-body">
+                            <pre class="bg-dark text-white"><code>
+                                // Establecer contenido
+                                $(".btn16").click(function(){
+                                    $(".txt").val("Cristian Vásquez");
+                                });
+                                // Devolver contenido
+                                $(".b2").click(function(){
+                                    alert($(".txt").val());
+                                });
+                            </code></pre>
+                            <br>
+                            <div class="row justify-content-around">
+                                <div class="input-group mb-3 col-sm-6">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Ingrese su nombre:</span>
+                                    </div>
+                                    <input type="text" class="form-control txt" placeholder="Nombre">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-around">
+                                <input type="button" class="btn btn-outline-primary col-3 h-25 btn16" value="Ingresar contenido al input">
+                            </div>
+                            <small class="text-muted">Clickea <b class="b2">AQUI</b> para devolver el contenido</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFourteen">
+                        <div class="row">
+                            <h5 class="mb-0 col">
+                                .text()
+                            </h5>
+                            <button class="btn btn-link btn-block text-right col collapsed" type="button" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                                Ejemplo:
+                            </button>
+                        </div>
+                    </div>
+                    <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordion">
+                        <div class="card-body">
+                            <pre class="bg-dark text-white"><code>
+                                // Cambiar texto
+                                $(".btn17").click(function(){
+                                    $(".alert-txt").text("Cambie el texto con el metodo .text()");
+                                });
+                                // Devolver texto
+                                $(".alert-txt").click(function(){
+                                    alert($(".alert-txt").text());
+                                });
+                            </code></pre>
+                            <br>
+                            <div class="row justify-content-around">
+                                <div class="alert alert-success alert-dismissible col-6 alert-txt">
+                                    <strong>Success!</strong> Esto es una Alerta
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row justify-content-around">
+                                <input type="button" class="btn btn-outline-primary col-3 h-25 btn17" value="Cambiar contenido de 'p'">
+                            </div>
+                            <small class="text-muted">Clickea sobre el Alert para devolver el texto</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery, Funciones, Popper.js, and Bootstrap JS -->        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="funciones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+#case3 {
+    display: none;
+}
+.div{
+    height: 60px;
+    display: none;
+}
+.color-r{
+    background-color: red;
+}
+.color-n{
+    background-color: black;
+}
+.color-v{
+    background-color: green;
+}
+.color-a{
+    background-color: blue;
+}
+.h{
+    height: 60px;
+}
+.h2{
+    height: 40px;
+    line-height: 40px;
+}
+.border{
+    border-radius: 20px;
+}
+
+
