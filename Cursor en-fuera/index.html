@@ -24,7 +24,7 @@
     </div>
     <div class="container-fluid">
         <div class="row justify-content-around">
-            <img src="img/Cartman1.png" new-src="img/Cartman2.png" class="col-sm-2" alt="Cartamn">
+            <img src="img/Cartman1.png" new-src="img/Cartman2.png" class="col-sm-2" alt="Cartman">
             <img src="img/Stan1.png" new-src="img/Stan2.png" class="col-sm-2" alt="Stan">
             <img src="img/Kyle1.png" new-src="img/Kyle2.png" class="col-sm-2" alt="Kyle">
             <img src="img/Kenny1.png" new-src="img/Kenny2.jpg" class="col-sm-2" alt="Kenny">
@@ -37,7 +37,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
-            $('img').hover(function(){
+            $("img").hover(function(){
                 let aux = $(this).attr("src");
                 $(this).attr("src", $(this).attr("new-src"));
                 $(this).attr("new-src", aux);
